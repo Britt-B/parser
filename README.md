@@ -7,7 +7,6 @@ Write a program to parse input from command line and determine if input is valid
 * Use C++
 * follow declaration rules (see functionality below)
 * report if any errors found, and what type of error was encountered
-* 
 ***
 ## Summary
 The program accepts input from the user via command line or file input and returns with a message of acceptance or information about what went wrong.
