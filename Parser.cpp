@@ -1,18 +1,18 @@
 // CS4303 Programming Language Concepts
 // Lab exercise - Parser
 //
-// Name ___Brittany Bergeron____ ID ____1955753______
+// Name ___Brittany Bergeron____ ID ____redacted____
 //
 // A simple parser for C/C++-style variable declarations.
 // THe grammar is as follows:
 //
-// <declaration> 	::= 	<type>  <var> �;� | <type> <var> �=� <number> �;�
+// <declaration> 	::= 	<type>  <var> ; | <type> <var> = <number> ;
 // <type> 			::= 	int | float
 // <var> 			::= 	A | B | C | D | E
 // <number> 		::= 	<integer> | <float>
 // <integer> 		::= 	<integer> <digit> | <digit>
 // <digit> 			::= 	0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-// <float> 			::= 	<integer> �.� <integer>
+// <float> 			::= 	<integer> . <integer>
 // 
 // Input is entered at the keyboard.
 // If the input is correct, the program should print
@@ -31,50 +31,6 @@
 // message is to be printed. The mapping from the error
 // code to the message can be found by looking at the
 // definition of function "error".
-//
-// The following are some sample input and the response
-// from the program:
-//
-// Please enter a declaration in format <type> <variable> [= number] ;
-// int A;
-// no error found
-//
-// Please enter a declaration in format <type> <variable> [= number] ;
-// int a;
-// illegal variable name
-//
-// Please enter a declaration in format <type> <variable> [= number] ;
-// short B;
-// unrecognizable type
-// 
-// Please enter a declaration in format <type> <variable> [= number] ;
-// float C = 0.5;
-// no error found
-// 
-// Please enter a declaration in format <type> <variable> [= number] ;
-// int A = 10,
-// ; expected
-//
-// float C = ;
-// unexpected number
-//
-// float D = 2;
-// no errors found
-//
-// int E = 2.2;
-// no errors found
-//
-// float B 40.5;
-// ; expected
-//
-// Other sample input:
-//		float B;
-//		float C=0.2;
-//		short D;
-//		float F;
-//
-// The last two sample inputs should generate errors because "short" and "F" are
-// not acceptable tokens.
 
 #include <iostream>
 #include <string>
